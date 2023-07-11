@@ -15,6 +15,7 @@ builder.Services.AddDbContext<ShoppingListApp.Models.AppDbContext>(options =>//
 });
 
 
+
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());//
 
 var app = builder.Build();

@@ -1,52 +1,56 @@
-﻿
+﻿@using ShoppingListApp.ViewModels
+@model List<UserViewModel>
+
 @{
+    
     Layout = "~/Views/Shared/Layout.cshtml";
 }
+
 <section class="container" style="">
     <header>Registration Form</header>
-    <form action="#" class="form">
+    <form  class="form" method="post">
         <div class="input-box">
             <label>Name</label>
-            <input type="text" placeholder="Enter your name" required />
+            <input type="text" placeholder="Enter your name" name="Name" required />
         </div>
 
         <div class="input-box">
             <label>Surname</label>
-            <input type="text" placeholder="Enter your surname" required />
+            <input type="text" placeholder="Enter your surname" name="Surname" required />
         </div>
 
         <div class="input-box">
             <label>Email Address</label>
-            <input type="email" placeholder="Enter your email address" required />
+            <input type="email" placeholder="Enter your email address" name="Email" required />
         </div>
         <div class="input-box">
             <label>User Name</label>
-            <input type="text" placeholder="Enter your user name" required />
+            <input type="text" placeholder="Enter your user name" name="UserName" required />
         </div>
         <div class="input-box">
             <label>Password</label>
-            <input type="password" placeholder="Enter your password" required />
+            <input type="password" placeholder="Enter your password" name="Password" required />
         </div>
 
         <div class="column">
             <div class="input-box">
                 <label>Phone Number</label>
-                <input type="number" placeholder="Enter phone number" required />
+                <input type="number" placeholder="Enter phone number" name="PhoneNumber" required />
             </div>
             <div class="input-box">
                 <label>Birth Date</label>
-                <input type="date" placeholder="Enter birth date" required />
+                <input type="date" placeholder="Enter birth date" name="BirthDate" required />
             </div>
         </div>
         <div class="gender-box">
             <h3>Gender</h3>
             <div class="gender-option">
                 <div class="gender">
-                    <input type="radio" id="check-male" name="gender" checked />
+                    <input type="radio" id="check-male" name="Gender" checked />
                     <label for="check-male">male</label>
                 </div>
                 <div class="gender">
-                    <input type="radio" id="check-female" name="gender" />
+                    <input type="radio" id="check-female" name="Gender" />
                     <label for="check-female">Female</label>
                 </div>
 
