@@ -1,14 +1,15 @@
 ﻿@using ShoppingListApp.ViewModels
-@model List<UserViewModel>
+@model UserViewModel
 
 @{
-    
     Layout = "~/Views/Shared/Layout.cshtml";
 }
 
 <section class="container" style="">
     <header>Registration Form</header>
-    <form  class="form" method="post">
+    <form class="form" method="post">
+        @Html.AntiForgeryToken()
+
         <div class="input-box">
             <label>Name</label>
             <input type="text" placeholder="Enter your name" name="Name" required />
@@ -46,17 +47,16 @@
             <h3>Gender</h3>
             <div class="gender-option">
                 <div class="gender">
-                    <input type="radio" id="check-male" name="Gender" checked />
+                    <input type="radio" id="check-male" name="Gender" value="Male" checked />
                     <label for="check-male">male</label>
                 </div>
                 <div class="gender">
-                    <input type="radio" id="check-female" name="Gender" />
+                    <input type="radio" id="check-female" name="Gender" value="Female" />
                     <label for="check-female">Female</label>
                 </div>
-
             </div>
         </div>
 
-        <button>Submit</button>
+        <button type="submit">Submit</button>
     </form>
 </section>

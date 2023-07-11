@@ -1,20 +1,21 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using ShoppingListApp.Models;
 using ShoppingListApp.ViewModels;
-using ShoppingListApp.Models; // Eklediğimiz User modeli için gerekli using ifadesi
-
+using System.Data.SqlClient;
 namespace ShoppingListApp.Mapping
 {
     public class SessionController : Controller
     {
-        private readonly IMapper _mapper;
-        private readonly DbContext _dbContext;
+        private readonly  IMapper _mapper;
+        AppDbContext _context;
 
-        public SessionController(DbContext dbContext, IMapper mapper)
+        public SessionController(AppDbContext context,IMapper mapper)
         {
-            _dbContext = dbContext;
+            _context= context;
             _mapper = mapper;
+
         }
 
         [HttpGet]
@@ -26,18 +27,12 @@ namespace ShoppingListApp.Mapping
         [HttpPost]
         public ActionResult Register(UserViewModel user)
         {
-            if (ModelState.IsValid)
-            {
-                var newUser = _mapper.Map<User>(user);
-
-                
-                _dbContext.Set<User>().Add(newUser);
-                _dbContext.SaveChanges();
-
-                return RedirectToAction("Index", "Home");
-            }
-
-            return View(user);
+            
+            _context.Users.Add(_mapper.Map<User>(user));
+            _context.SaveChanges();
+            return View();
         }
+
+
     }
 }
