@@ -9,9 +9,7 @@
     list-style: none;
 }
 
-body {
-    background-color: #2f0b8ae1;
-}
+
 /* nav bar css kodları*/
 
 nav {
@@ -148,8 +146,10 @@ nav ul {
 
 
 footer {
+
     width: 100%;
     background-color: black;
+    padding:70px 0;
 }
 .col {
     width: 25%;

@@ -7,6 +7,7 @@ namespace ShoppingListApp.Controllers
         public IActionResult Index()
         {
             ViewBag.Index = "active";
+            ViewBag.IndexCss = "Index";
             return View();
         }
     }

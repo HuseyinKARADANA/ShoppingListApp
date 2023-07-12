@@ -12,6 +12,10 @@
 
   <ItemGroup>
     <None Include="wwwroot\css\register.css" />
+    <None Include="wwwroot\img\1.jpg" />
+    <None Include="wwwroot\img\2.jpg" />
+    <None Include="wwwroot\img\3.jpg" />
+    <None Include="wwwroot\img\4.jpg" />
   </ItemGroup>
 
   <ItemGroup>
