@@ -21,14 +21,17 @@ namespace ShoppingListApp.Mapping
         [HttpGet]
         public ActionResult Register()
         {
+            ViewBag.register = "register";
+            ViewBag.registerActive = "active";
             return View();
         }
 
         [HttpPost]
         public ActionResult Register(UserViewModel user)
         {
-            
-            _context.Users.Add(_mapper.Map<User>(user));
+            var map= _mapper.Map<User>(user);
+            map.RegisterDate=System.DateTime.Now;
+            _context.Users.Add(map);
             _context.SaveChanges();
             return View();
         }

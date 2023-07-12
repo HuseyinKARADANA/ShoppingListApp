@@ -7,7 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\css\navRegister.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\style.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\register.css" />
   </ItemGroup>
 
   <ItemGroup>
