@@ -38,10 +38,10 @@
         </div>
         <!--manual navigation start-->
         <div class="navigation-manual">
-            <label for="radio1" class="manual-btn"></label>
-            <label for="radio2" class="manual-btn"></label>
-            <label for="radio3" class="manual-btn"></label>
-            <label for="radio4" class="manual-btn"></label>
+            <label for="radio1" class="manual-btn" onclick="setCounter1()"></label>
+            <label for="radio2" class="manual-btn" onclick="setCounter2()"></label>
+            <label for="radio3" class="manual-btn" onclick="setCounter3()"></label>
+            <label for="radio4" class="manual-btn" onclick="setCounter4()"></label>
         </div>
         <!--manual navigation end-->
     </div>
@@ -51,6 +51,18 @@
 
 <script type="text/javascript">
     var counter=1;
+
+    function setCounter1() {
+        counter = 1;
+    }
+    function setCounter2() {
+        counter = 2;
+    } function setCounter3() {
+        counter = 3;
+    } function setCounter4() {
+        counter = 4;
+    }
+
     setInterval(function() {
         document.getElementById('radio'+counter).checked =true;
         counter++;

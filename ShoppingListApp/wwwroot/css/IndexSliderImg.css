@@ -1,16 +1,14 @@
-﻿/* Index Slider Img*/
-
+﻿
 .offer {
     margin: 0;
     padding: 0;
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .slider {
-    width: 800px;
+    width: 1200px;
     height: 500px;
     border-radius: 10px;
     overflow: hidden;
@@ -32,22 +30,22 @@
 }
 
     .slide img {
-        width: 800px;
-        height: 500px;
+        width: 1200px;
+        height: 720px;
     }
 
 /* css for manual slide navigation*/
 
 .navigation-manual {
     position: absolute;
-    width: 800px;
+    width: 1200px;
     margin-top: -40px;
     display: flex;
     justify-content: center;
 }
 
 .manual-btn {
-    border: 2px solid #40D3DC;
+    border: 2px solid #40D;
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
@@ -83,7 +81,7 @@
 .navigation-auto {
     position: absolute;
     display: flex;
-    width: 800px;
+    width: 1200px;
     justify-content: center;
     margin-top: 460px;
 }
